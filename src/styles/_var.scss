@@ -1,0 +1,8 @@
+$first_black: #212121;
+$first_white: #ECEFF1;
+@mixin border($top, $right, $bottom, $left, $type, $color) {
+    border-top: $top $type $color;
+    border-right: $right $type $color;
+    border-bottom: $bottom $type $color;
+    border-left: $left $type $color;
+}
