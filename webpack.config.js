@@ -16,6 +16,7 @@ module.exports = {
         extensions: [".js", ".json", ".scss", ".css", ".vue"],
         alias: {
             fonts: path.join(__dirname, "assets", "fonts"),
+            vue: 'vue/dist/vue.js'
         }
     },
     watch: true,
@@ -51,6 +52,11 @@ module.exports = {
                 loader: 'vue-loader'
             },
         ]
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        compress: true,
+        port: 7777
     },
 
     plugins: [

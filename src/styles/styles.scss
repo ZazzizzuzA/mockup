@@ -1,3 +1,53 @@
 @import '_var';
 @import '_reset';
+.icon-menu {
+    height: 40px;
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 101;
+    padding: 5px 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #c6d0d5;
+    }
+}
+
+.block-sidebar {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 330px;
+    box-shadow: 2px 0px 130px #d3d3d3a9;
+    display: flex;
+    flex-flow: column wrap;
+    &__logo {
+        font-family: 'RobotoBold';
+        text-align: center;
+        font-size: 30px;
+        color: #4989af;
+        padding-top: 20px;
+        position: relative;
+        span {
+            font-family: 'RobotoThin';
+            font-size: 24px;
+        }
+    }
+    &__menu {
+        align-self: center;
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
 @import '_adaptive';

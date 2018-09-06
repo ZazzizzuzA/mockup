@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack --mode production",
-        "dev": "webpack --mode development"
+        "dev": "webpack --mode development",
+        "http": "webpack-dev-server"
     },
     "repository": {
         "type": "git",
@@ -33,9 +34,11 @@
         "url-loader": "*",
         "vue": "*",
         "vue-loader": "*",
+        "vue-router": "^3.0.1",
         "vue-template-compiler": "*",
         "webpack": "*",
-        "webpack-cli": "^3.1.0"
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.7"
     },
     "devDependencies": {}
 }
