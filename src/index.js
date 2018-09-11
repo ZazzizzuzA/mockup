@@ -3,7 +3,7 @@ import Vue from "vue";
 import router from "./router";
 import sidebar from "./components/sidebar.vue";
 
-new Vue({
+let sidebarMenu = new Vue({
     el: '#sidebarMenu',
     components: {
         'sidebar': sidebar
@@ -13,8 +13,11 @@ new Vue({
 let nav = new Vue({
     template: `
     <div class="block-sidebar__menu">
-            <router-link to="/" class="nav-sidebar-button">MY CONTENT</router-link>
-            <router-link to="/posts" class="nav-sidebar-button">POSTS</router-link>
+        <router-link to="/" class="block-sidebar__menu-button"><img src="../assets/icons/post-it1.png" class="first-child-img-icon">MY CONTENT</router-link>
+        <router-link to="/posts" class="block-sidebar__menu-button"><img src="../assets/icons/post-it.gif">POSTS</router-link>
+        <router-link to="/subreddits" class="block-sidebar__menu-button"><img src="../assets/icons/magnifying-glass.gif">DISCOVER SUBREDDITS</router-link>
+        <router-link to="/findTime" class="block-sidebar__menu-button"><img src="../assets/icons/chemistry.gif">Find the best time</router-link>
+        <router-link to="/settings" class="block-sidebar__menu-button"><img src="../assets/icons/settings.gif">ACCOUNT SETTINGS</router-link>
     </div>
     `,
     router
@@ -28,9 +31,3 @@ let view = new Vue({
         </div>`,
     router
 })
-
-
-/* <router-link to="/posts">POSTS</router-link>
-<router-link to="/subreddits">DISCOVER SUBREDDITS</router-link>
-<router-link to="/findTime">Find the best time</router-link>
-<router-link to="/settings">ACCOUNT SETTINGS</router-link> */

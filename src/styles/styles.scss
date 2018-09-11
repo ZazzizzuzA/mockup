@@ -27,10 +27,11 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 330px;
+    width: 430px;
     box-shadow: 2px 0px 130px #d3d3d3a9;
     display: flex;
     flex-flow: column wrap;
+    // padding: 0px 0px 0px 10px;
     &__logo {
         font-family: 'RobotoBold';
         text-align: center;
@@ -38,15 +39,68 @@
         color: #4989af;
         padding-top: 20px;
         position: relative;
+        margin-bottom: 130px;
         span {
             font-family: 'RobotoThin';
             font-size: 24px;
         }
     }
+    &__button-newPost {
+        border: 0px;
+        background-color: #03a9f4;
+        border-radius: 25px;
+        width: 160px;
+        padding: 10px 25px;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'RobotoRegular', sans-serif;
+        font-size: 16px;
+        align-self: center;
+    }
     &__menu {
         align-self: center;
         display: flex;
         flex-flow: column wrap;
+        margin-top: 70px;
+        width: 100%;
+        &-button {
+            text-decoration: none;
+            color: #78909c;
+            padding: 12px 0px 12px 115px;
+            box-sizing: border-box;
+            img {
+                filter: grayscale(1);
+                margin-right: 25px;
+                width: 20px;
+                vertical-align: bottom;
+            }
+        }
+        &-button:active,
+        &-button:hover {
+            color: #121212;
+            box-shadow: 9px 0px 6px -5px #03a9f4 inset;
+            img {
+                filter: saturate(8);
+            }
+            .first-child-img-icon {
+                filter: none;
+            }
+        }
+        .router-link-exact-active {
+            color: #121212;
+            box-shadow: 9px 0px 6px -5px #03a9f4 inset;
+            img {
+                filter: saturate(8);
+            }
+        }
+    }
+}
+
+.block {
+    &__content {
+        min-width: 80vw;
     }
 }
 
